@@ -1,0 +1,262 @@
+/* This keeps the body at full width */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* This creates a container for your content at 80% width */
+.container {
+  width: 80%;
+  max-width: 1200px; /* Optional: set a maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add some padding on the sides */
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding-bottom: var(--spacing-16);
+  }
+  
+  /* Button styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: var(--text-base);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-600);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-700);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-200);
+    color: var(--secondary-800);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-300);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    color: var(--primary-600);
+    border: 1px solid var(--primary-600);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--primary-50);
+  }
+  
+  .btn-danger {
+    background-color: var(--error);
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #dc2626;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--text-lg);
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: var(--text-sm);
+  }
+  
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn-icon svg {
+    margin-right: 0.5rem;
+  }
+  
+  .btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-700);
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--gray-700);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary-400);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+  }
+  
+  /* Card styles */
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-header {
+    padding: 1rem;
+    margin-bottom: 0;
+    background-color: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+    border-top-left-radius: var(--border-radius-lg);
+    border-top-right-radius: var(--border-radius-lg);
+  }
+  
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+  
+  .card-footer {
+    padding: 1rem;
+    background-color: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    border-bottom-left-radius: var(--border-radius-lg);
+    border-bottom-right-radius: var(--border-radius-lg);
+  }
+  
+  /* Alert styles */
+  .alert {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+  }
+  
+  .alert-primary {
+    color: var(--primary-900);
+    background-color: var(--primary-100);
+    border-color: var(--primary-200);
+  }
+  
+  .alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+  }
+  
+  .alert-warning {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+  }
+  
+  .alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+  }
+  
+  .alert-info {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+    background-color: var(--primary-600);
+    border-radius: 100%;
+    animation: pulse 1s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive utilities */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 var(--spacing-4);
+    }
+    
+    h1 {
+      font-size: var(--text-3xl);
+    }
+    
+    h2 {
+      font-size: var(--text-2xl);
+    }
+    
+    h3 {
+      font-size: var(--text-xl);
+    }
+  }
+  
+  /* Global animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }

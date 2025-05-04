@@ -1,0 +1,156 @@
+/* Modern Navbar Styles - Streamlined Version */
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-800);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: var(--primary-600);
+}
+
+.navbar-icon {
+  color: var(--primary-600);
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-icon {
+  margin-right: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  color: var(--secondary-600);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--primary-600);
+}
+
+.nav-link.active {
+  color: var(--primary-600);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-600);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--secondary-600);
+  padding: 0.25rem;
+}
+
+.menu-icon:hover {
+  color: var(--primary-600);
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    opacity: 0;
+  }
+
+  .navbar-menu.active {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid var(--secondary-100);
+    width: 100%;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    background-color: var(--primary-50);
+    border-left: 3px solid var(--primary-600);
+  }
+}

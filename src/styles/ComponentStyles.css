@@ -1,0 +1,141 @@
+/* ComponentStyles.css */
+
+/* TrainingDynamics component styling */
+.training-dynamics-section {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Model Architecture Flowcharts styling */
+  .model-architecture-flowcharts {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .mermaid {
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+  }
+  
+  /* Data Processing Flow Diagram styling */
+  .data-processing-flow-diagram {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Training Process Flowchart styling */
+  .training-process-flowchart {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .image-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+  }
+  
+  /* Image Captioning Pipeline styling */
+  .image-captioning-pipeline {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Results Discussion styling */
+  .results-discussion {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .results-section,
+  .discussion-section {
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .results-section:hover,
+  .discussion-section:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Model Comparison Table styling */
+  .model-comparison-table {
+    transition: all 0.3s ease;
+  }
+  
+  .model-comparison-table:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .training-dynamics-section,
+    .model-architecture-flowcharts,
+    .data-processing-flow-diagram,
+    .training-process-flowchart,
+    .image-captioning-pipeline,
+    .model-comparison-table {
+      padding: 1rem;
+    }
+    
+    .results-section,
+    .discussion-section {
+      padding: 1rem;
+    }
+  }
+  
+  /* Animation for tab transitions */
+  .tab-content > div {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Custom scrollbar for overflow content */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
